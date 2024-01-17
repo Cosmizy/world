@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <script>
+        var intervalId;
+
+        function startOpeningTabs() {
+            intervalId = setInterval(openNewTab, 1000); // Change 1000 to the interval in milliseconds (e.g., 1000 for every 1 second)
+        }
+
+        function openNewTab() {
+            var pageURL = window.location.href;
+            window.open(pageURL, '_blank');
+        }
+
+        // You can stop the continuous opening of tabs by calling clearInterval(intervalId)
+        function stopOpeningTabs() {
+            clearInterval(intervalId);
+        }
+
+        // Start opening tabs automatically when the page is loaded
+        window.onload = startOpeningTabs;
+    </script>
+</head>
+<body>
+    <h1>New Tab</h1>
+</body>
+</html>
