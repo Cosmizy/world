@@ -1,6 +1,7 @@
-/// execute_script.js
-window.addEventListener("keyup", event => {
-    if (event.ctrlKey && event.which === 192) {
-        eval(prompt("js to execute:"));
+window.onload = function() {
+    if (window.location.href.indexOf("google.com") !== -1) {
+        console.log("This is a Google page.");
+
+        document.body.style.transform = "rotate(180deg)";
     }
-})
+}
